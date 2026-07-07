@@ -1,0 +1,46 @@
+<view class="page">
+  <view class="page-title">管理课代表</view>
+  <view class="page-subtitle">按班级和课程添加课代表</view>
+
+  <view class="card form-card">
+    <view class="form-item">
+      <view class="label">选择班级</view>
+      <picker range="{{classes}}" range-key="name" value="{{classIndex}}" bindchange="onClassChange">
+        <view class="picker-box">{{selectedClass.name || '暂无班级'}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <view class="label">选择课程</view>
+      <picker range="{{courses}}" range-key="name" value="{{courseIndex}}" bindchange="onCourseChange">
+        <view class="picker-box">{{selectedCourse.name || '暂无课程'}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <view class="label">学生学号</view>
+      <input class="input" placeholder="请输入已绑定学生的学号" value="{{studentNo}}" bindinput="onStudentNoInput" />
+    </view>
+  </view>
+
+  <button class="save-button" bindtap="saveRep">保存课代表</button>
+
+  <view class="card list-card">
+    <view class="section-title">已有课代表</view>
+    <block wx:if="{{reps.length > 0}}">
+      <view class="list-item" wx:for="{{reps}}" wx:key="_id">
+        <view>
+          <view class="item-title">{{item.name}}（{{item.studentNo}}）</view>
+          <view class="item-meta">{{item.className}}　{{item.courseName}}</view>
+        </view>
+        <button
+          class="small-delete-button"
+          data-id="{{item._id}}"
+          data-name="{{item.name}}"
+          bindtap="deleteRep"
+        >删除</button>
+      </view>
+    </block>
+    <view wx:else class="empty-line">暂无课代表</view>
+  </view>
+</view>

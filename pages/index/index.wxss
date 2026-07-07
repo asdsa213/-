@@ -1,0 +1,128 @@
+.homework-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-left: 0;
+}
+
+.notice-text {
+  margin-top: 20rpx;
+  padding: 18rpx 22rpx;
+  border-radius: 12rpx;
+  background: #fff7ed;
+  color: #c05621;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.class-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+  margin-top: 22rpx;
+  padding: 20rpx 24rpx;
+  border-radius: 14rpx;
+  background: #ffffff;
+  border: 1rpx solid #dceee7;
+}
+
+.switch-label {
+  color: #7a8491;
+  font-size: 24rpx;
+}
+
+.switch-name {
+  margin-top: 6rpx;
+  color: #1f2933;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.switch-button {
+  flex-shrink: 0;
+  padding: 12rpx 20rpx;
+  border-radius: 999rpx;
+  background: #e8f5ef;
+  color: #1f7a5c;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.homework-card::before {
+  content: "";
+  position: absolute;
+  left: 18rpx;
+  top: 24rpx;
+  width: 8rpx;
+  bottom: 24rpx;
+  border-radius: 999rpx;
+  background: #1f7a5c;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.course-name {
+  color: #1f7a5c;
+  font-size: 27rpx;
+  font-weight: 600;
+  padding-left: 18rpx;
+}
+
+.status-tag {
+  flex-shrink: 0;
+  padding: 8rpx 16rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.status-normal {
+  background: #e8f5ef;
+  color: #1f7a5c;
+}
+
+.status-urgent {
+  background: #fff1e6;
+  color: #c05621;
+}
+
+.homework-title {
+  margin-top: 16rpx;
+  padding-left: 18rpx;
+  font-size: 34rpx;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #132238;
+}
+
+.source-text {
+  display: inline-block;
+  margin-top: 14rpx;
+  padding: 6rpx 12rpx;
+  border-radius: 8rpx;
+  background: #eef6ff;
+  color: #2563eb;
+  font-size: 22rpx;
+}
+
+.deadline {
+  margin-top: 14rpx;
+  padding-left: 18rpx;
+  color: #d97706;
+  font-size: 27rpx;
+  font-weight: 500;
+}
+
+.summary {
+  margin-top: 12rpx;
+  padding-left: 18rpx;
+  color: #6b7280;
+  font-size: 28rpx;
+  line-height: 1.6;
+}

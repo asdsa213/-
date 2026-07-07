@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="page-title">{{homework.title}}</view>
+  <view class="page-subtitle">{{homework.courseName}}</view>
+
+  <view class="card detail-card">
+    <view class="info-line">发布时间：{{homework.publishTime}}</view>
+    <view class="info-line deadline">截止时间：{{homework.deadline}}</view>
+    <view class="status-line">当前状态：<text class="status-text {{homework.statusClass}}">{{homework.status}}</text></view>
+    <view class="section-title">完整作业要求</view>
+    <view class="content">{{homework.requirement}}</view>
+    <view class="section-title">备注</view>
+    <view class="content">{{homework.note}}</view>
+  </view>
+
+  <button class="know-button" bindtap="markKnown">我知道了</button>
+  <button wx:if="{{canEdit}}" class="edit-button" bindtap="editHomework">修改作业</button>
+  <button wx:if="{{canDelete}}" class="delete-button" bindtap="deleteHomework">删除作业</button>
+</view>

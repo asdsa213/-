@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="page-title">绑定学生信息</view>
+  <view class="page-subtitle">可逐个添加多个班级，用于分别查看课程和作业通知</view>
+
+  <view class="card form-card">
+    <view class="form-item">
+      <view class="label">姓名</view>
+      <input class="input" placeholder="请输入姓名" value="{{name}}" bindinput="onNameInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label">学号</view>
+      <input class="input" placeholder="请输入学号" value="{{studentNo}}" bindinput="onStudentNoInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label">班级</view>
+      <picker range="{{classes}}" range-key="name" value="{{classIndex}}" bindchange="onClassChange">
+        <view class="picker-box">{{selectedClass.name}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="agreement-row" bindtap="toggleAgreement">
+    <view class="checkbox {{agreed ? 'checkbox-checked' : ''}}">{{agreed ? '✓' : ''}}</view>
+    <view class="agreement-text">
+      我已阅读并同意
+      <text class="link" catchtap="goToUserAgreement">《用户服务协议》</text>
+      和
+      <text class="link" catchtap="goToPrivacyPolicy">《隐私政策》</text>
+    </view>
+  </view>
+
+  <button class="save-button" bindtap="saveProfile">保存绑定信息</button>
+</view>

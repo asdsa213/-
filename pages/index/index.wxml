@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="page-title">班级作业通知</view>
+  <view class="page-subtitle">{{student.className}}最近要交的作业都在这里</view>
+  <picker wx:if="{{classes.length > 1}}" range="{{classes}}" range-key="name" value="{{classIndex}}" bindchange="onClassChange">
+    <view class="class-switch">
+      <view>
+        <view class="switch-label">当前班级</view>
+        <view class="switch-name">{{student.className}}</view>
+      </view>
+      <view class="switch-button">切换班级</view>
+    </view>
+  </picker>
+  <view wx:if="{{loadError}}" class="notice-text">{{loadError}}</view>
+
+  <block wx:if="{{recentHomeworks.length > 0}}">
+    <view
+      class="card homework-card"
+      wx:for="{{recentHomeworks}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      data-source="{{item.source}}"
+      bindtap="goToHomework"
+    >
+      <view class="card-top">
+        <view class="course-name">{{item.courseName}}</view>
+        <view class="status-tag {{item.statusClass}}">{{item.status}}</view>
+      </view>
+      <view wx:if="{{item.sourceText}}" class="source-text">{{item.sourceText}}</view>
+      <view class="homework-title">{{item.title}}</view>
+      <view class="deadline">截止时间：{{item.deadline}}</view>
+      <view class="summary">{{item.summary}}</view>
+    </view>
+  </block>
+  <view wx:else class="empty-text">暂无要交的作业</view>
+</view>

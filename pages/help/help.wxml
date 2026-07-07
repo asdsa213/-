@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="page-title">使用说明</view>
+  <view class="page-subtitle">班级作业通知的基本使用方式</view>
+
+  <view class="card">
+    <view class="section-title">学生使用</view>
+    <view class="text-line">首次进入时，请填写姓名、学号并选择班级。</view>
+    <view class="text-line">首页会显示当前班级最近要交的作业。</view>
+    <view class="text-line">课程页可以按课程查看历史作业。</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">管理员使用</view>
+    <view class="text-line">管理员入口只对已授权账号显示。</view>
+    <view class="text-line">发布作业时需要先选择班级，再选择课程。</view>
+    <view class="text-line">删除作业会先进行权限校验。</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">课代表使用</view>
+    <view class="text-line">课代表权限由管理员添加，只能发布和修改自己负责课程的作业。</view>
+    <view class="text-line">如果你的账号出现“发布作业”入口，说明你已被设置为某门课程的课代表。</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">作业提醒</view>
+    <view class="text-line">在作业详情页点击“我知道了”后，可以选择是否开启后续作业提醒。</view>
+    <view class="text-line">提醒需要用户主动授权订阅消息，未授权不会发送服务通知。</view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="page-title">管理班级</view>
+  <view class="page-subtitle">添加或删除学生可选择的班级</view>
+
+  <view class="card form-card">
+    <view class="form-item">
+      <view class="label">班级编号</view>
+      <input class="input" placeholder="例如：gk2401" value="{{classId}}" bindinput="onClassIdInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label">班级名称</view>
+      <input class="input" placeholder="例如：管科2401班" value="{{name}}" bindinput="onNameInput" />
+    </view>
+  </view>
+
+  <button class="save-button" bindtap="saveClass">保存班级</button>
+
+  <view class="card list-card">
+    <view class="section-title">已有班级</view>
+    <block wx:if="{{classes.length > 0}}">
+      <view class="list-item" wx:for="{{classes}}" wx:key="id">
+        <view>
+          <view class="item-title">{{item.name}}</view>
+          <view class="item-meta">编号：{{item.id}}</view>
+        </view>
+        <button
+          class="small-delete-button"
+          data-id="{{item.id}}"
+          data-name="{{item.name}}"
+          bindtap="deleteClass"
+        >删除</button>
+      </view>
+    </block>
+    <view wx:else class="empty-line">暂无班级</view>
+  </view>
+</view>

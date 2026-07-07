@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="page-title">管理作业</view>
+  <view class="page-subtitle">查看并删除云端已发布作业</view>
+
+  <view class="card form-card">
+    <view class="form-item">
+      <view class="label">选择班级</view>
+      <picker range="{{classes}}" range-key="name" value="{{classIndex}}" bindchange="onClassChange">
+        <view class="picker-box">{{selectedClass.name || '暂无班级'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="card list-card">
+    <view class="section-title">作业列表</view>
+    <block wx:if="{{homeworks.length > 0}}">
+      <view class="list-item" wx:for="{{homeworks}}" wx:key="id">
+        <view class="homework-main">
+          <view class="item-title">{{item.title}}</view>
+          <view class="item-meta">{{item.courseName}}　截止：{{item.deadline}}</view>
+        </view>
+        <button
+          class="small-delete-button"
+          data-id="{{item.id}}"
+          data-title="{{item.title}}"
+          bindtap="deleteHomework"
+        >删除</button>
+      </view>
+    </block>
+    <view wx:else class="empty-line">暂无作业</view>
+  </view>
+</view>

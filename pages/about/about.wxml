@@ -1,0 +1,16 @@
+<view class="page">
+  <view class="page-title">关于小程序</view>
+  <view class="page-subtitle">一个用于查看班级作业通知的工具</view>
+
+  <view class="card">
+    <view class="section-title">班级作业通知</view>
+    <view class="text-line">本小程序用于班级内部查看课程作业通知，帮助同学更方便地查看近期作业、课程作业历史和作业详情。</view>
+    <view class="text-line">当前版本为体验版本，功能会根据实际使用情况继续完善。</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">数据说明</view>
+    <view class="text-line">小程序会保存你填写的姓名、学号和班级，用于展示与你所在班级相关的课程和作业。</view>
+    <view class="text-line">本小程序不是学校官方教务平台，请以任课老师或班级正式通知为准。</view>
+  </view>
+</view>

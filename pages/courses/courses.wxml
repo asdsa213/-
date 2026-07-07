@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="page-title">课程</view>
+  <view class="page-subtitle">{{student.className}}课程与作业记录</view>
+  <picker wx:if="{{classes.length > 1}}" range="{{classes}}" range-key="name" value="{{classIndex}}" bindchange="onClassChange">
+    <view class="class-switch">
+      <view>
+        <view class="switch-label">当前班级</view>
+        <view class="switch-name">{{student.className}}</view>
+      </view>
+      <view class="switch-button">切换班级</view>
+    </view>
+  </picker>
+  <view wx:if="{{loadError}}" class="notice-text">{{loadError}}</view>
+
+  <block wx:if="{{courseCards.length > 0}}">
+    <view
+      class="card course-card"
+      wx:for="{{courseCards}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="goToCourse"
+    >
+      <view class="course-name">{{item.name}}</view>
+      <view class="teacher">任课老师：{{item.teacher}}</view>
+      <view class="recent">最近一次作业：{{item.latestHomeworkTitle}}</view>
+      <view class="count">历史作业数量：{{item.homeworkCount}}</view>
+    </view>
+  </block>
+  <view wx:else class="empty-text">暂无课程</view>
+</view>

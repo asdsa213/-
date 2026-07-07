@@ -1,0 +1,65 @@
+.history-card {
+  display: block;
+  border-left: 8rpx solid #1f7a5c;
+}
+
+.history-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18rpx;
+}
+
+.homework-title {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.status-tag {
+  flex-shrink: 0;
+  padding: 8rpx 16rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.status-normal {
+  background: #e8f5ef;
+  color: #1f7a5c;
+}
+
+.status-urgent {
+  background: #fff1e6;
+  color: #c05621;
+}
+
+.status-ended {
+  background: #eef2f7;
+  color: #6b7280;
+}
+
+.source-text {
+  display: inline-block;
+  margin-top: 12rpx;
+  padding: 6rpx 12rpx;
+  border-radius: 8rpx;
+  background: #eef6ff;
+  color: #2563eb;
+  font-size: 22rpx;
+}
+
+.time {
+  margin-top: 10rpx;
+  color: #6b7280;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.summary {
+  margin-top: 14rpx;
+  color: #374151;
+  font-size: 28rpx;
+  line-height: 1.6;
+}

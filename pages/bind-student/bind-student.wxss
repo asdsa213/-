@@ -1,0 +1,82 @@
+.form-card {
+  padding-top: 8rpx;
+}
+
+.form-item {
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #edf1f5;
+}
+
+.form-item:last-child {
+  border-bottom: 0;
+}
+
+.label {
+  margin-bottom: 14rpx;
+  color: #374151;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.picker-box,
+.input {
+  width: 100%;
+  min-height: 84rpx;
+  box-sizing: border-box;
+  padding: 20rpx 22rpx;
+  border-radius: 12rpx;
+  background: #f5f7fa;
+  color: #1f2933;
+  font-size: 28rpx;
+}
+
+.save-button {
+  margin-top: 36rpx;
+  border-radius: 16rpx;
+  background: #1f7a5c;
+  color: #ffffff;
+  font-size: 30rpx;
+  font-weight: 600;
+  box-shadow: 0 10rpx 24rpx rgba(31, 122, 92, 0.18);
+}
+
+.save-button::after {
+  border: 0;
+}
+
+.agreement-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16rpx;
+  margin-top: 28rpx;
+  color: #4b5563;
+  font-size: 26rpx;
+  line-height: 1.6;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 4rpx;
+  border: 2rpx solid #9ca3af;
+  border-radius: 6rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 24rpx;
+}
+
+.checkbox-checked {
+  border-color: #1f7a5c;
+  background: #1f7a5c;
+}
+
+.agreement-text {
+  flex: 1;
+}
+
+.link {
+  color: #1f7a5c;
+  font-weight: 600;
+}

@@ -1,0 +1,49 @@
+<view class="page">
+  <view class="page-title">管理课程</view>
+  <view class="page-subtitle">先选择班级，再添加或删除这个班级的课程</view>
+
+  <view class="card form-card">
+    <view class="form-item">
+      <view class="label">选择班级</view>
+      <picker range="{{classes}}" range-key="name" value="{{classIndex}}" bindchange="onClassChange">
+        <view class="picker-box">{{selectedClass.name || '暂无班级'}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <view class="label">课程编号</view>
+      <input class="input" placeholder="例如：database" value="{{courseId}}" bindinput="onCourseIdInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label">课程名称</view>
+      <input class="input" placeholder="例如：数据库系统原理" value="{{name}}" bindinput="onNameInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label">任课老师</view>
+      <input class="input" placeholder="例如：王老师" value="{{teacher}}" bindinput="onTeacherInput" />
+    </view>
+  </view>
+
+  <button class="save-button" bindtap="saveCourse">保存课程</button>
+
+  <view class="card list-card">
+    <view class="section-title">当前班级课程</view>
+    <block wx:if="{{courses.length > 0}}">
+      <view class="list-item" wx:for="{{courses}}" wx:key="id">
+        <view>
+          <view class="item-title">{{item.name}}</view>
+          <view class="item-meta">编号：{{item.id}}　老师：{{item.teacher}}</view>
+        </view>
+        <button
+          class="small-delete-button"
+          data-id="{{item.id}}"
+          data-name="{{item.name}}"
+          bindtap="deleteCourse"
+        >删除</button>
+      </view>
+    </block>
+    <view wx:else class="empty-line">暂无课程</view>
+  </view>
+</view>

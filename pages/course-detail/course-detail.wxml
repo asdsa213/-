@@ -1,0 +1,25 @@
+<view class="page">
+  <view class="page-title">{{course.name}}</view>
+  <view class="page-subtitle">任课老师：{{course.teacher}}</view>
+
+  <view wx:if="{{!hasHomeworks}}" class="empty-text">暂无历史作业</view>
+  <view wx:else>
+    <view
+      class="card history-card"
+      wx:for="{{courseHomeworks}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      data-source="{{item.source}}"
+      bindtap="goToHomework"
+    >
+      <view class="history-top">
+        <view class="homework-title">{{item.title}}</view>
+        <view class="status-tag {{item.statusClass}}">{{item.status}}</view>
+      </view>
+      <view wx:if="{{item.sourceText}}" class="source-text">{{item.sourceText}}</view>
+      <view class="time">发布时间：{{item.publishTime}}</view>
+      <view class="time">截止时间：{{item.deadline}}</view>
+      <view class="summary">{{item.summary}}</view>
+    </view>
+  </view>
+</view>
