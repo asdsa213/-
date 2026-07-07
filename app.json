@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/courses/courses",
+    "pages/course-detail/course-detail",
+    "pages/homework-detail/homework-detail",
+    "pages/admin-publish/admin-publish",
+    "pages/admin-classes/admin-classes",
+    "pages/admin-courses/admin-courses",
+    "pages/admin-homeworks/admin-homeworks",
+    "pages/admin-reps/admin-reps",
+    "pages/bind-student/bind-student",
+    "pages/my-class/my-class",
+    "pages/help/help",
+    "pages/about/about",
+    "pages/user-agreement/user-agreement",
+    "pages/privacy-policy/privacy-policy",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "班级作业通知",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f6f8fb"
+  },
+  "tabBar": {
+    "color": "#7a8491",
+    "selectedColor": "#1f7a5c",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/courses/courses",
+        "text": "课程",
+        "iconPath": "images/tabbar/courses.png",
+        "selectedIconPath": "images/tabbar/courses-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tabbar/profile.png",
+        "selectedIconPath": "images/tabbar/profile-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

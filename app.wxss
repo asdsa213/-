@@ -1,0 +1,44 @@
+/**app.wxss**/
+page {
+  background: #f5f7fa;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 36rpx 28rpx 56rpx;
+}
+
+.page-title {
+  color: #152238;
+  font-size: 46rpx;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.page-subtitle {
+  margin-top: 12rpx;
+  color: #6b7280;
+  font-size: 28rpx;
+}
+
+.card {
+  margin-top: 26rpx;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  background: #ffffff;
+  border: 1rpx solid #edf1f5;
+  box-shadow: 0 10rpx 28rpx rgba(31, 41, 51, 0.05);
+}
+
+.empty-text {
+  margin-top: 48rpx;
+  padding: 44rpx 24rpx;
+  border-radius: 16rpx;
+  background: #ffffff;
+  color: #8a94a3;
+  text-align: center;
+  font-size: 28rpx;
+}
